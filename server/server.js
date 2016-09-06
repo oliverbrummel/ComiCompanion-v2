@@ -31,6 +31,7 @@ MongoDB.once('open', function(){
 })
 
 
+//[[[[[[[[[[[[[[[[[[[[[[ SERVER SETUP ]]]]]]]]]]]]]]]]]]]]]]
 var port = process.env.PORT || 3000;
 var server = app.listen(port, function(){
   var liveport = server.address().port;
