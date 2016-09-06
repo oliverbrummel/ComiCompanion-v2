@@ -16,8 +16,8 @@ module.exports = function(grunt) {
           //      banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
           //  },
            build: {
-               src: 'client/client.js',
-               dest: 'server/public/assets/scripts/client.min.js'
+               src: 'client/*.js',
+               dest: 'server/public/assets/scripts/composite.all.min.js'
            }
        },
        copy: {
@@ -25,7 +25,9 @@ module.exports = function(grunt) {
                expand: true,
                cwd: "node_modules/",
                src: [
-                   "angular/angular.min.js"
+                   "angular/angular.min.js",
+                   "angular-route/angular-route.min.js",
+                   "bootstrap/dist/css/bootstrap.min.css"
 
                ],
                "dest": "server/public/vendors/"

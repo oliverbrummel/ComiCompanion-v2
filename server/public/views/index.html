@@ -1,16 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html ng-app = "comicApp_v2">
   <head>
     <meta charset="utf-8">
     <title>comicompanion v2</title>
     <!-- LIBRARIES -->
+    <script src = "vendors/angular/angular.min.js"></script>
+    <script src = "vendors/angular-route/angular-route.min.js"></script>
 
+    <link rel = "stylesheet" href = "vendors/bootstrap/dist/css/bootstrap.min.css" />
     <!-- CUSTOM -->
-    <script src = "assets/scripts/client.min.js"></script>
+    <script src = "assets/scripts/composite.all.min.js"></script>
     <link rel = "stylesheet" href = "assets/styles/style.css" />
 
+    <base href = "/" />
   </head>
   <body>
-    <h1>Hello World</h1>
+    <h1>New and Improved ComiCompanion</h1>
+    <div>
+      <nav class = "navbar navbar-default">
+        <ul class = "nav navbar-nav">
+          <li>
+            <a href = "/shopping">SHOPPING</a>
+          </li>
+          <li>
+            <a href = "/backlog">BACKLOG</a>
+          </li>
+          <li>
+            <a href = "/history">HISTORY</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div ng-view>
+
+    </div>
+
   </body>
 </html>
